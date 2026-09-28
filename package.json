@@ -1,7 +1,7 @@
 {
   "name": "m2-evaluacion2-level-up-store",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

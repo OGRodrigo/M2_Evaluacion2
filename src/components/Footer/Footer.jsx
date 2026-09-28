@@ -2,13 +2,25 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer" id="footer">
+    <footer
+      className="footer"
+      id="footer"
+    >
       <div className="footer__container">
         <div>
-          <strong>LEVEL UP STORE</strong>
-          <p>Tu tienda de videojuegos.</p>
+          <strong>
+            LEVEL UP STORE
+          </strong>
+
+          <p>
+            Productos para cada momento,
+            en un solo lugar.
+          </p>
         </div>
-        <span>© 2026</span>
+
+        <span>
+          © 2026
+        </span>
       </div>
     </footer>
   );

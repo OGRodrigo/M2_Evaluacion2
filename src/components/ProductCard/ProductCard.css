@@ -1,23 +1,12 @@
 .product-card {
   height: 100%;
-
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
-
-  background: linear-gradient(
-    180deg,
-    #131b2b 0%,
-    #101725 100%
-  );
-
+  background: linear-gradient(180deg, #131b2b 0%, #101725 100%);
   border: 1px solid #1e293b;
   border-radius: 18px;
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.22);
-
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -26,88 +15,56 @@
 
 .product-card:hover {
   transform: translateY(-5px);
-
   border-color: rgba(34, 211, 238, 0.45);
-
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
-/* =========================
-   IMAGEN / CARÁTULA
-   ========================= */
 
 .product-card__media {
   position: relative;
-
   width: 100%;
   height: 280px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
-  background-color: #080c14;
-
+  background: #080c14;
   isolation: isolate;
 }
 
-/* Fondo desenfocado usando la misma imagen */
-
 .product-card__media::before {
   content: "";
-
   position: absolute;
   inset: -20px;
-
   background-image: var(--cover-image);
   background-size: cover;
   background-position: center;
-
   filter: blur(18px);
-
-  opacity: 0.28;
-
+  opacity: 0.22;
   transform: scale(1.12);
-
   z-index: -2;
 }
 
-/* Capa oscura para mejorar el contraste */
-
 .product-card__media::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     180deg,
     rgba(8, 12, 20, 0.08),
-    rgba(8, 12, 20, 0.45)
+    rgba(8, 12, 20, 0.48)
   );
-
   z-index: -1;
 }
 
-/* Carátula principal */
-
 .product-card__image {
   position: relative;
-
   width: auto;
   max-width: 100%;
   height: 100%;
-
   object-fit: contain;
   object-position: center;
-
   display: block;
-
   z-index: 1;
-
   transition: transform 0.28s ease;
 }
 
@@ -115,128 +72,82 @@
   transform: scale(1.025);
 }
 
-/* =========================
-   CATEGORÍA
-   ========================= */
-
 .product-card__category {
   position: absolute;
   top: 12px;
   left: 12px;
-
   z-index: 3;
-
   padding: 6px 10px;
-
-  background-color: rgba(8, 12, 20, 0.88);
-
+  background: rgba(8, 12, 20, 0.88);
   color: #22d3ee;
-
   border: 1px solid rgba(34, 211, 238, 0.3);
   border-radius: 20px;
-
   font-size: 0.72rem;
   font-weight: 700;
-
+  text-transform: capitalize;
   backdrop-filter: blur(8px);
 }
 
-/* =========================
-   CONTENIDO
-   ========================= */
-
 .product-card__body {
   flex: 1;
-
   display: flex;
   flex-direction: column;
-
   padding: 17px;
 }
 
-/* Plataforma */
-
-.product-card__platform {
-  margin: 0 0 8px;
-
+.product-card__brand {
+  margin: 0 0 7px;
   color: #94a3b8;
-
   font-size: 0.75rem;
 }
 
-/* Título */
-
 .product-card__title {
   margin: 0;
-
   min-height: 46px;
-
   color: #ffffff;
-
   font-size: 1.08rem;
   font-weight: 700;
-
   line-height: 1.35;
 }
 
-/* Rating */
-
 .product-card__rating {
   margin: 8px 0 0;
-
   color: #fbbf24;
-
   font-size: 0.82rem;
   font-weight: 600;
 }
 
-/* =========================
-   PRECIO + BOTÓN
-   ========================= */
-
 .product-card__footer {
   margin-top: auto;
   padding-top: 16px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 12px;
-
   border-top: 1px solid #1e293b;
 }
 
 .product-card__price {
   color: #ffffff;
-
   font-size: 1.05rem;
   font-weight: 800;
 }
 
 .product-card__button {
   padding: 10px 15px;
-
-  border: none;
   border-radius: 9px;
-
-  background-color: #22d3ee;
-
+  background: #22d3ee;
   color: #082f49;
-
   font-size: 0.85rem;
   font-weight: 800;
-
   cursor: pointer;
-
   transition:
     background-color 0.2s ease,
     transform 0.2s ease;
 }
 
 .product-card__button:hover {
-  background-color: #67e8f9;
-
+  background: #67e8f9;
   transform: translateY(-1px);
 }
 
@@ -244,19 +155,11 @@
   transform: translateY(0);
 }
 
-/* =========================
-   TABLET
-   ========================= */
-
 @media (max-width: 900px) {
   .product-card__media {
     height: 270px;
   }
 }
-
-/* =========================
-   MOBILE
-   ========================= */
 
 @media (max-width: 600px) {
   .product-card__media {
@@ -269,7 +172,6 @@
 
   .product-card__title {
     min-height: auto;
-
     font-size: 1.05rem;
   }
 

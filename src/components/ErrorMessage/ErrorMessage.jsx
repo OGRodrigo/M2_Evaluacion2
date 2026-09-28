@@ -3,9 +3,12 @@ import "./ErrorMessage.css";
 function ErrorMessage({ message }) {
   return (
     <div className="error-message" role="alert">
-      <span className="error-message__icon">⚠️</span>
+      <span className="error-message__icon" aria-hidden="true">
+        ⚠️
+      </span>
+
       <div>
-        <h3>No pudimos cargar los videojuegos</h3>
+        <h3>No pudimos cargar los productos</h3>
         <p>{message || "Ocurrió un problema inesperado."}</p>
       </div>
     </div>

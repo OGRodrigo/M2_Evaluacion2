@@ -4,14 +4,13 @@ function ProductCard({
   title,
   price,
   category,
-  platform,
   thumbnail,
   rating,
+  brand,
 }) {
-  const formattedPrice = new Intl.NumberFormat("es-CL", {
+  const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "CLP",
-    maximumFractionDigits: 0,
+    currency: "USD",
   }).format(price);
 
   return (
@@ -23,7 +22,7 @@ function ProductCard({
         <img
           className="product-card__image"
           src={thumbnail}
-          alt={`Portada de ${title}`}
+          alt={title}
         />
 
         <span className="product-card__category">
@@ -32,9 +31,7 @@ function ProductCard({
       </div>
 
       <div className="product-card__body">
-        <p className="product-card__platform">
-          🎮 {platform}
-        </p>
+        {brand && <p className="product-card__brand">{brand}</p>}
 
         <h3 className="product-card__title">
           {title}
@@ -56,7 +53,7 @@ function ProductCard({
             className="product-card__button"
             type="button"
           >
-            Ver juego
+            Ver producto
           </button>
         </div>
       </div>
